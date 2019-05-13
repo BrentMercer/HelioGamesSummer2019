@@ -452,7 +452,7 @@ PrefabInstance:
     - target: {fileID: 3441052908218229982, guid: eeda013041e93ef418b8c399b8dca02d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.87
+      value: -1.74
       objectReference: {fileID: 0}
     - target: {fileID: 3441052908218229982, guid: eeda013041e93ef418b8c399b8dca02d,
         type: 3}
@@ -497,6 +497,31 @@ PrefabInstance:
     - target: {fileID: 3441052908218229982, guid: eeda013041e93ef418b8c399b8dca02d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441052908218229969, guid: eeda013041e93ef418b8c399b8dca02d,
+        type: 3}
+      propertyPath: m_WindTurbulence
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441052908218229969, guid: eeda013041e93ef418b8c399b8dca02d,
+        type: 3}
+      propertyPath: m_WindMain
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441052908218229969, guid: eeda013041e93ef418b8c399b8dca02d,
+        type: 3}
+      propertyPath: m_WindPulseFrequency
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441052908218229969, guid: eeda013041e93ef418b8c399b8dca02d,
+        type: 3}
+      propertyPath: m_WindPulseMagnitude
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441052908218229969, guid: eeda013041e93ef418b8c399b8dca02d,
+        type: 3}
+      propertyPath: m_Mode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
