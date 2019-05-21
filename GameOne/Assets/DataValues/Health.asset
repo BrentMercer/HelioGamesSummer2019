@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fe67e4390f3d4668a4391191253ddda, type: 3}
-  m_Name: Speed
+  m_Script: {fileID: 11500000, guid: e5b30b45eea2e403cb617093e26bd42b, type: 3}
+  m_Name: Health
   m_EditorClassIdentifier: 
-  IntValue: 88
+  Value: 1

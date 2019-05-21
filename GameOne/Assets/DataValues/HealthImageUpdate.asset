@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fe67e4390f3d4668a4391191253ddda, type: 3}
-  m_Name: Shield Strength
+  m_Script: {fileID: 11500000, guid: 15337436a78d04566a142f4c0062178f, type: 3}
+  m_Name: HealthImage
   m_EditorClassIdentifier: 
-  IntValue: 0
+  Data: {fileID: 0}
