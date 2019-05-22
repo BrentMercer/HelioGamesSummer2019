@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu]
 public class FloatData : ScriptableObject
@@ -10,5 +8,10 @@ public class FloatData : ScriptableObject
     public void UpdateValue(float amount)
     {
         Value += amount;
+    }
+
+    public void ResetValue(float amount)
+    {
+        Value = 1;
     }
 }

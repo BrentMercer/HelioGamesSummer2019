@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15337436a78d04566a142f4c0062178f, type: 3}
-  m_Name: HealthImage
+  m_Script: {fileID: 11500000, guid: 79a42783247cc4aaeb1b787ca322f104, type: 3}
+  m_Name: DebugObj
   m_EditorClassIdentifier: 
-  Data: {fileID: 0}
