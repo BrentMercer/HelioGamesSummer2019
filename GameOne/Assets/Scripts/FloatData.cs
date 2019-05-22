@@ -12,6 +12,23 @@ public class FloatData : ScriptableObject
 
     public void ResetValue(float amount)
     {
-        Value = 1;
+        Value = amount;
     }
+
+    public void CheckMinValue(float minValue)
+    {
+        if(Value <= minValue)
+        {
+            Value = minValue;
+        }
+    }
+
+    public void CheckMaxValue(float maxValue)
+    {
+        if (Value >= maxValue)
+        {
+            Value = maxValue;
+        }
+    }
+
 }

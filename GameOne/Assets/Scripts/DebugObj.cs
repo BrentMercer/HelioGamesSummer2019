@@ -14,4 +14,5 @@ public class DebugObj : ScriptableObject
     {
         Debug.Log(obj.Value);
     }
+
 }
