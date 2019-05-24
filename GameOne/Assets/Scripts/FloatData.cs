@@ -4,6 +4,7 @@
 public class FloatData : ScriptableObject
 {
     public float Value;
+    public float MinValue;
 
     public void UpdateValue(float amount)
     {
@@ -14,4 +15,19 @@ public class FloatData : ScriptableObject
     {
         Value = amount;
     }
+    public void CheckMinValue(float minValue)
+    {
+        if (Value <= minValue)
+        {
+            Value = minValue;
+        }
+    }
+    public void CheckMaxValue(float maxValue)
+    {
+        if (Value >= maxValue)
+        {
+            Value = maxValue;
+        }
+    }
+
 }
