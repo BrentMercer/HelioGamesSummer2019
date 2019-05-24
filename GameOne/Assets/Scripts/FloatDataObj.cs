@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu]
-public class FloatData : ScriptableObject
+public class FloatDataObj : ScriptableObject
 {
     public float Value;
     public float MinValue;
