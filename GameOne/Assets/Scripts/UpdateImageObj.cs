@@ -4,7 +4,7 @@ using UnityEngine.UI;
 [CreateAssetMenu]
 public class UpdateImageObj : ScriptableObject
 {
-    public FloatData data;
+    public FloatDataObj data;
 
     public void ChangeFillAmount(Image img)
     {
