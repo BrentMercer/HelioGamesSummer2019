@@ -4,15 +4,15 @@ using UnityEngine.Events;
 public class GameActionObjHandler : MonoBehaviour
 {
     public GameActionObj ActionObj;
-    public UnityEvent Event;
-    
-    void Start()
+    public UnityEvent RaiseEvent;
+
+    private void Start()
     {
         ActionObj.Action += OnRaise;
     }
 
     private void OnRaise()
     {
-        Event.Invoke();
+        RaiseEvent.Invoke();
     }
 }

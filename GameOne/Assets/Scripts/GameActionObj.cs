@@ -8,7 +8,6 @@ public class GameActionObj : ScriptableObject
 
     public void RaiseAction()
     {
-        //Action();
         Action?.Invoke();
     }
 }
