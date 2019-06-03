@@ -5,10 +5,8 @@ using UnityEngine.Events;
 public class GameActionObj : ScriptableObject
 {
     public UnityAction Action;
-
     public void RaiseAction()
     {
-        Action();
+        Action?.Invoke();
     }
-
 }
