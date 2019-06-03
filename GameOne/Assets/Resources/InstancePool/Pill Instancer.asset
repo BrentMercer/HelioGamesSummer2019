@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e4389066f94a47b09ca6d4bb84f725d, type: 3}
-  m_Name: CurrentLocation
+  m_Script: {fileID: 11500000, guid: c8c4f7815099d4ca78c52e5cdb244b01, type: 3}
+  m_Name: Pill Instancer
   m_EditorClassIdentifier: 
-  Value: {x: 0, y: 0, z: 0}
+  Prefab: {fileID: 7019918431372890000, guid: 8d5fb758095094ef9b06815ccd7fcfc5, type: 3}
