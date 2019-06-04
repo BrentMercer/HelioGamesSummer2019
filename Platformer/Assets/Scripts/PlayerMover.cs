@@ -5,14 +5,16 @@ public class PlayerMover : MonoBehaviour
 {
     public CharacterController2D controller;
 
+    public PlayerObj playerData;
     private float horizontalMove = 0f;
-    public float runSpeed = 40f;
+    public float runSpeed;
 
     bool jump = false;
     bool crouch = false;
 
     private void Update()
     {
+        runSpeed = playerData.moveSpeed;
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         if (Input.GetButtonDown("Jump"))
