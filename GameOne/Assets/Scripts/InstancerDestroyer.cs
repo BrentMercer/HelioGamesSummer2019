@@ -2,7 +2,7 @@
 using UnityEngine.Events;
 
 [CreateAssetMenu]
-public class Instancer : ScriptableObject
+public class InstancerDestroyer : ScriptableObject
 {
 
     public GameObject Prefab;
@@ -16,5 +16,10 @@ public class Instancer : ScriptableObject
     public void InstantiateAtObj(GameObject gObj)
     {
         Instantiate(gObj);
+    }
+
+    public void DestroyObj(GameObject gObj)
+    {
+        Destroy(gObj);
     }
 }
