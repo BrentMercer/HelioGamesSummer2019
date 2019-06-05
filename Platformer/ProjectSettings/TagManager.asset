@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - Ground
   - Background
-  - 
+  - Main Ground
+  - Foreground
   - Player
   - Enemy
   - 
@@ -44,12 +44,18 @@ TagManager:
   - name: Background
     uniqueID: 3548995659
     locked: 0
-  - name: Foreground
+  - name: Main Ground
     uniqueID: 1916168819
     locked: 0
   - name: Player Layer
-    uniqueID: 2842613753
+    uniqueID: 1008454167
     locked: 0
   - name: Climbing
-    uniqueID: 1008454167
+    uniqueID: 2142059741
+    locked: 0
+  - name: Enemy
+    uniqueID: 2159404319
+    locked: 0
+  - name: Foreground
+    uniqueID: 2842613753
     locked: 0
