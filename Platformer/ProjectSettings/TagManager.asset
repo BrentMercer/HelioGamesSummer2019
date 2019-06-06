@@ -14,11 +14,11 @@ TagManager:
   - 
   - 
   - Background
-  - Main Ground
+  - Ground
   - Foreground
   - Player
   - Enemy
-  - 
+  - Interactables
   - 
   - 
   - 
@@ -44,17 +44,17 @@ TagManager:
   - name: Background
     uniqueID: 3548995659
     locked: 0
-  - name: Main Ground
+  - name: Ground
     uniqueID: 1916168819
     locked: 0
   - name: Player Layer
     uniqueID: 1008454167
     locked: 0
-  - name: Climbing
-    uniqueID: 2142059741
-    locked: 0
   - name: Enemy
     uniqueID: 2159404319
+    locked: 0
+  - name: Interactabes
+    uniqueID: 2142059741
     locked: 0
   - name: Foreground
     uniqueID: 2842613753

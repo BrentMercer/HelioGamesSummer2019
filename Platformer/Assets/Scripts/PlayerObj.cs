@@ -18,5 +18,9 @@ public class PlayerObj : ScriptableObject
     //public bool hasImpulseCannon;
     //public bool hasLaserRifle;
 
+    public void TakeDamage()
+    {
+
+    }
 
 }

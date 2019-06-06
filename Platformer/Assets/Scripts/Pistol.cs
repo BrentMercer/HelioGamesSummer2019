@@ -3,7 +3,6 @@ using UnityEngine.Events;
 
 public class Pistol : MonoBehaviour
 {
-    public float fireSpeed = 1;
     public float bulletSpeed = 20f;
     public int bulletDamage = 20;
     public Rigidbody2D rb;
