@@ -7,7 +7,7 @@ public class Vector3Data : ScriptableObject
 
     public void UpdateValue(Transform obj)
     {
-        Value = obj.localPosition;
+        Value = obj.TransformPoint(obj.localPosition);
     }
 
     public void UpdateTransform(Transform obj)

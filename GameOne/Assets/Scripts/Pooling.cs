@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,24 +7,37 @@ public class Pooling : MonoBehaviour
 {
     public GameObject ItemToPool;
     public List<GameObject> Pool;
-    private int currentItemNum;
+    private int poolCount;
 
-    public void AddToPool()
+    public void AddToPool(int numberToAdd)
     {
-        var item = Instantiate(ItemToPool);
-        item.SetActive(false);
-        Pool.Add(item);
+
+        for (int i = 0; i < numberToAdd; i++)
+        {
+            var item = Instantiate(ItemToPool);
+            Pool.Add(item);
+        }
     }
 
-    public void UseItem()
+    public void DisableAllPoolItems()
     {
-        Pool[currentItemNum].SetActive(true);
-        if (currentItemNum <= Pool.Count)
+        foreach (var item in Pool)
         {
-            currentItemNum++;
+            item.SetActive(false);
+        }
+    }
+
+    public void UsePool()
+    {
+        if (poolCount < Pool.Count)
+        {
+            Pool[poolCount].SetActive(true);
+            poolCount++;
         } else
         {
-            currentItemNum = 0;
+            poolCount = 0;
+            Pool[poolCount].SetActive(true);
         }
+
     }
 }
