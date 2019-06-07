@@ -5,9 +5,10 @@ using UnityEngine.Events;
 
 public class Weapon : MonoBehaviour
 {
-    public PlayerObj playerData;
+    public PlayerData playerData;
     public Transform firePoint;
-    public GameObject laserBlastPrefab;
+    public Bullet bullet;
+
 
     void Update()
     {
@@ -20,7 +21,7 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(laserBlastPrefab, firePoint.position, firePoint.rotation);
+        Instantiate(bullet, firePoint.position, firePoint.rotation);
     }
 
 }

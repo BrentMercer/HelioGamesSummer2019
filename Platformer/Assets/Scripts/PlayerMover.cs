@@ -5,7 +5,7 @@ public class PlayerMover : MonoBehaviour
 {
     public CharacterController2D controller;
 
-    public PlayerObj playerData;
+    public PlayerData playerData;
     private float horizontalMove = 0f;
     public float runSpeed;
 

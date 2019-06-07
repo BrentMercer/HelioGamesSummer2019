@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class MonoEvents : MonoBehaviour
 {
     public UnityEvent StartEvent, TriggerEnterEvent;
-    public PlayerObj player;
 
     private void Start()
     {

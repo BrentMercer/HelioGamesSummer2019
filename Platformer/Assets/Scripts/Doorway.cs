@@ -8,8 +8,10 @@ public class Doorway : MonoBehaviour
 {
     public string NextSceneName;
     public int LevelLoadDelay;
+    public Doorway nextDoor;
 
-    void OnTriggerEnter2D(Collider2D other)
+
+    public void loadScene()
     {
         StartCoroutine(LoadNextScene());
     }
@@ -18,6 +20,7 @@ public class Doorway : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(LevelLoadDelay);
         SceneManager.LoadScene(NextSceneName, LoadSceneMode.Single);
+        //Move player to nextDoor location
     }
 
 }
