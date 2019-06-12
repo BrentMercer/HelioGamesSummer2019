@@ -14,6 +14,17 @@ public class PlayerMover : MonoBehaviour
 
     private void Update()
     {
+        PlayerMovement();
+    }
+
+    private void FixedUpdate()
+    {
+        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        jump = false;
+    }
+
+    private void PlayerMovement()
+    {
         runSpeed = playerData.moveSpeed;
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
@@ -25,15 +36,10 @@ public class PlayerMover : MonoBehaviour
         if (Input.GetButtonDown("Crouch"))
         {
             crouch = true;
-        } else if (Input.GetButtonUp("Crouch"))
+        }
+        else if (Input.GetButtonUp("Crouch"))
         {
             crouch = false;
         }
-    }
-
-    private void FixedUpdate()
-    {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
-        jump = false;
     }
 }

@@ -1,12 +1,12 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
     public int enemyHealth;
     public int enemyDamage;
 
-    public GameObject deathEffect;
 
     public void TakeDamage(int damage)
     {

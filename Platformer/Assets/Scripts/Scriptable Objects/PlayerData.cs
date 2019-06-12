@@ -13,12 +13,4 @@ public class PlayerData : ScriptableObject
     public float jumpForce;
     [Range(0, 1)] public float croutchSpeed;
 
-
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
-
-    }
-
-
 }

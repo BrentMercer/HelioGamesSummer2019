@@ -75,9 +75,9 @@ GameObject:
   - component: {fileID: 4164148999662096087}
   - component: {fileID: 4164148999662096084}
   - component: {fileID: 4164148999662096085}
+  - component: {fileID: 7795565914822961710}
   - component: {fileID: 4164148999662096042}
   - component: {fileID: 4164148999662096043}
-  - component: {fileID: 7795565914822961710}
   m_Layer: 11
   m_Name: Player
   m_TagString: Untagged
@@ -261,6 +261,19 @@ MonoBehaviour:
   controller: {fileID: 4164148999662096084}
   playerData: {fileID: 11400000, guid: 52609399dc91744d2bc520a5d44bd39b, type: 2}
   runSpeed: 40
+--- !u!114 &7795565914822961710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4164148999662096040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a9496ae83d854dc7a6e69b1b4d54653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 52609399dc91744d2bc520a5d44bd39b, type: 2}
 --- !u!114 &4164148999662096042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,19 +342,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &7795565914822961710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4164148999662096040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a9496ae83d854dc7a6e69b1b4d54653, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: 52609399dc91744d2bc520a5d44bd39b, type: 2}
 --- !u!1 &4164149000075722020
 GameObject:
   m_ObjectHideFlags: 0
