@@ -6,21 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class Doorway : MonoBehaviour
 {
-    public string NextSceneName;
-    public int LevelLoadDelay;
-    public Doorway nextDoor;
+    public string nextSceneName;
+    public int levelLoadDelay;
 
 
-    public void loadScene()
+    public void LoadScene()
     {
+        Debug.Log("Loading new scene now.");
         StartCoroutine(LoadNextScene());
     }
 
     private IEnumerator LoadNextScene()
     {
-        yield return new WaitForSecondsRealtime(LevelLoadDelay);
-        SceneManager.LoadScene(NextSceneName, LoadSceneMode.Single);
-        //Move player to nextDoor location
+        yield return new WaitForSecondsRealtime(levelLoadDelay);
+        SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
     }
 
 }

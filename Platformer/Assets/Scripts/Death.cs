@@ -6,7 +6,6 @@ public class Death : MonoBehaviour
 
     public PlayerData playerData;
 
-
     public void checkDeath()
     {
         if(playerData.health <= 0)

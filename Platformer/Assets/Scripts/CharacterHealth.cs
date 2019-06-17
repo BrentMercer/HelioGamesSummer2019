@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 public class CharacterHealth : MonoBehaviour
 {
+
     public PlayerData playerData;
 
     public void TakeDamage(int damage)
