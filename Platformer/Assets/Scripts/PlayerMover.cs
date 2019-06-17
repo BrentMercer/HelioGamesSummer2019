@@ -6,11 +6,10 @@ public class PlayerMover : MonoBehaviour
     public CharacterController2D controller;
 
     public PlayerData playerData;
-    private float horizontalMove = 0f;
-    public float runSpeed;
+    private float horizontalMove;
 
-    bool jump = false;
-    bool crouch = false;
+    bool jump;
+    bool crouch;
 
     private void Update()
     {
@@ -25,7 +24,7 @@ public class PlayerMover : MonoBehaviour
 
     private void PlayerMovement()
     {
-        runSpeed = playerData.moveSpeed;
+        float runSpeed = playerData.moveSpeed;
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         if (Input.GetButtonDown("Jump"))

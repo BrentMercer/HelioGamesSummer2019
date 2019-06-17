@@ -1,6 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -11,8 +12,12 @@ public class PlayerManager : MonoBehaviour
     public CharacterController2D charController;
     public PlayerMover charMover;
 
+    public static Action onDie;
+
     private bool hitFromRight;
     private bool isStunned = false;
+
+
 
     private void Start()
     {
@@ -63,6 +68,8 @@ public class PlayerManager : MonoBehaviour
     {
         if(playerData.health <= 0)
         {
+            //Debug.Log("Running onDie action.");
+            //onDie?.Invoke();
             Die();
         }
     }
@@ -70,6 +77,9 @@ public class PlayerManager : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
+
+        Scene loadedLevel = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(loadedLevel.buildIndex);
     }
 
     public void Knockback(bool hitFromRight, float enemyKnockbackPower)
