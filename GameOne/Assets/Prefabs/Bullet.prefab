@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!1 &7019918431372890000
+=======
+--- !u!1 &5692634079374350019
+>>>>>>> develop
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,6 +12,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 7019918431372889997}
   - component: {fileID: 7019918431372889996}
   - component: {fileID: 7019918431372889999}
@@ -18,41 +23,77 @@ GameObject:
   - component: {fileID: 1000484200732670043}
   - component: {fileID: 4515092159358580173}
   m_Layer: 10
+=======
+  - component: {fileID: 5692634079374350022}
+  - component: {fileID: 5692634079374350023}
+  - component: {fileID: 5692634079374350020}
+  - component: {fileID: 5692634079374350021}
+  - component: {fileID: 5692634079374350041}
+  - component: {fileID: 5934543601589524459}
+  - component: {fileID: 744863456329824109}
+  - component: {fileID: 8676842138821944116}
+  m_Layer: 0
+>>>>>>> develop
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &7019918431372889997
+=======
+--- !u!4 &5692634079374350022
+>>>>>>> develop
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 7019918431372890000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2.88}
   m_LocalScale: {x: 0.104374014, y: 0.13932024, z: 0.30770642}
+=======
+  m_GameObject: {fileID: 5692634079374350019}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.94, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+>>>>>>> develop
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!33 &7019918431372889996
+=======
+--- !u!33 &5692634079374350023
+>>>>>>> develop
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 7019918431372890000}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &7019918431372889999
+=======
+  m_GameObject: {fileID: 5692634079374350019}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &5692634079374350020
+>>>>>>> develop
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 7019918431372890000}
+=======
+  m_GameObject: {fileID: 5692634079374350019}
+>>>>>>> develop
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -83,28 +124,46 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
 --- !u!135 &7019918431372889998
+=======
+--- !u!135 &5692634079374350021
+>>>>>>> develop
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 7019918431372890000}
+=======
+  m_GameObject: {fileID: 5692634079374350019}
+>>>>>>> develop
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!54 &7019918431372889994
+=======
+--- !u!54 &5692634079374350041
+>>>>>>> develop
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 7019918431372890000}
   serializedVersion: 2
   m_Mass: 0.01
+=======
+  m_GameObject: {fileID: 5692634079374350019}
+  serializedVersion: 2
+  m_Mass: 1
+>>>>>>> develop
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -112,6 +171,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+<<<<<<< HEAD
 --- !u!75 &4487587126753479266
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -125,15 +185,25 @@ ConstantForce:
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!114 &7019918431372890001
+=======
+--- !u!114 &5934543601589524459
+>>>>>>> develop
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 7019918431372890000}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c930372693b44b768c4e68a494bf602, type: 3}
+=======
+  m_GameObject: {fileID: 5692634079374350019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f25df76caa4e41acbf8d3c98d95762e, type: 3}
+>>>>>>> develop
   m_Name: 
   m_EditorClassIdentifier: 
   StartEvent:
@@ -141,6 +211,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+<<<<<<< HEAD
   TriggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -169,6 +240,13 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 11400000, guid: 03025e9a4c77a4efaa3324d9b0f3bf88, type: 2}
         m_MethodName: RaiseAction
+=======
+  OnEnableEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5934543601589524459}
+        m_MethodName: OnStartCoroutine
+>>>>>>> develop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -178,17 +256,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< HEAD
       - m_Target: {fileID: 11400000, guid: a5653f27d764a4c18b2899c490307978, type: 2}
         m_MethodName: CheckMinValue
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+=======
+      - m_Target: {fileID: 11400000, guid: cf02082408223410089da58bd57029c9, type: 2}
+        m_MethodName: ObjectToInstanceOrUse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5692634079374350019}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+>>>>>>> develop
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< HEAD
       - m_Target: {fileID: 11400000, guid: 883a20f1079544bc3b958f132acac7ac, type: 2}
         m_MethodName: UpdateValue
         m_Mode: 4
@@ -207,13 +295,27 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 11400000, guid: 883a20f1079544bc3b958f132acac7ac,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: FloatDataObj, Assembly-CSharp
+=======
+      - m_Target: {fileID: 11400000, guid: cf02082408223410089da58bd57029c9, type: 2}
+        m_MethodName: UseObjAtLocation
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 1ed32ac95e005446fa105f9d918d870a,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: Vector3Data, Assembly-CSharp
+>>>>>>> develop
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< HEAD
       - m_Target: {fileID: 11400000, guid: 0e65f867e99804d2ba0a4adb205ca2e9, type: 2}
         m_MethodName: RaiseAction
+=======
+      - m_Target: {fileID: 5692634079374350041}
+        m_MethodName: WakeUp
+>>>>>>> develop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -223,6 +325,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< HEAD
       - m_Target: {fileID: 11400000, guid: 883a20f1079544bc3b958f132acac7ac, type: 2}
         m_MethodName: CheckMinValue
         m_Mode: 4
@@ -261,12 +364,25 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7019918431372890000}
+=======
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  CoroutineEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: cf02082408223410089da58bd57029c9, type: 2}
+        m_MethodName: DeactivateObj
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5692634079374350019}
+>>>>>>> develop
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< HEAD
       - m_Target: {fileID: 11400000, guid: ffdcfc42d765449a782bb0271d8788d0, type: 2}
         m_MethodName: ActivateObjAtLocation
         m_Mode: 2
@@ -286,6 +402,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1000484200732670043}
         m_MethodName: OnStartCoroutine
+=======
+      - m_Target: {fileID: 5692634079374350041}
+        m_MethodName: Sleep
+>>>>>>> develop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -293,6 +413,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+<<<<<<< HEAD
           m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -309,28 +430,46 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+=======
+>>>>>>> develop
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+<<<<<<< HEAD
   EndCountdownEvent:
+=======
+  EndCountDownEvent:
+>>>>>>> develop
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StartHoldTime: 1
   RepeatHoldTime: 1
+<<<<<<< HEAD
   CountdownNum: 0
 --- !u!114 &4515092159358580173
+=======
+  CountDownNum: 0
+--- !u!114 &744863456329824109
+>>>>>>> develop
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 7019918431372890000}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b26a7c9d9a57b45e39fd6b6917a91c4a, type: 3}
+=======
+  m_GameObject: {fileID: 5692634079374350019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624f6e3af80a447588a772b61f4d8e30, type: 3}
+>>>>>>> develop
   m_Name: 
   m_EditorClassIdentifier: 
   TriggerEnterEvent:
@@ -351,11 +490,19 @@ MonoBehaviour:
   CollisionEnterEvent:
     m_PersistentCalls:
       m_Calls:
+<<<<<<< HEAD
       - m_Target: {fileID: 11400000, guid: ffdcfc42d765449a782bb0271d8788d0, type: 2}
         m_MethodName: DestroyObj
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7019918431372890000}
+=======
+      - m_Target: {fileID: 11400000, guid: cf02082408223410089da58bd57029c9, type: 2}
+        m_MethodName: DeactivateObj
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5692634079374350019}
+>>>>>>> develop
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -374,3 +521,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+<<<<<<< HEAD
+=======
+--- !u!75 &8676842138821944116
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5692634079374350019}
+  m_Enabled: 1
+  m_Force: {x: 20, y: 0, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
+>>>>>>> develop

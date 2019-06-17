@@ -11,13 +11,21 @@ PhysicsManager:
   m_DefaultContactOffset: 0.01
   m_DefaultSolverIterations: 6
   m_DefaultSolverVelocityIterations: 1
+<<<<<<< HEAD
   m_QueriesHitBackfaces: 0
+=======
+  m_QueriesHitBackfaces: 1
+>>>>>>> develop
   m_QueriesHitTriggers: 1
   m_EnableAdaptiveForce: 0
   m_ClothInterCollisionDistance: 0
   m_ClothInterCollisionStiffness: 0
   m_ContactsGeneration: 1
+<<<<<<< HEAD
   m_LayerCollisionMatrix: c8f8ffffc8f0ffffc8f0ffffffffffffc8f0ffffc8f0ffffffffffffffffffffc8f0ffffc8f8ffffc8f8ffffc9f6ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+=======
+  m_LayerCollisionMatrix: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+>>>>>>> develop
   m_AutoSimulation: 1
   m_AutoSyncTransforms: 0
   m_ReuseCollisionCallbacks: 1

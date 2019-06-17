@@ -4,6 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
+=======
+  - Fire
+>>>>>>> develop
   - PowerUp
   layers:
   - Default
@@ -15,11 +19,19 @@ TagManager:
   - 
   - 
   - PostProcessing
+<<<<<<< HEAD
   - Ground
   - AmmoPowerUp
   - Player
   - 
   - 
+=======
+  - 
+  - MainShadow
+  - Ground
+  - Player
+  - Ammo
+>>>>>>> develop
   - 
   - 
   - 

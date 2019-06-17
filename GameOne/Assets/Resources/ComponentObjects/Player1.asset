@@ -9,6 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: e5331cac2b52044c9b4d8ca01e31112e, type: 3}
   m_Name: Player1
   m_EditorClassIdentifier: 
@@ -16,3 +17,12 @@ MonoBehaviour:
   JumpSpeed: 10
   JumpCountMax: 2
   Gravity: {fileID: 11400000, guid: 9b98e0611798a486ebbb149988ac7166, type: 2}
+=======
+  m_Script: {fileID: 11500000, guid: 8fef2f6268dd844b9b896007a8b89282, type: 3}
+  m_Name: Player1
+  m_EditorClassIdentifier: 
+  MoveSpeed: 10
+  JumpSpeed: 8
+  JumpCountMax: 2
+  Gravity: {fileID: 11400000, guid: 1ff5b9db34b6b448a993200b4830b28c, type: 2}
+>>>>>>> develop

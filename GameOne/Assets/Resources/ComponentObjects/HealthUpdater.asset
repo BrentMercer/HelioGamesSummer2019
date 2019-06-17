@@ -9,7 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: eca30ea959bf947b3923a468e5020179, type: 3}
   m_Name: HealthUpdater
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: a5653f27d764a4c18b2899c490307978, type: 2}
+=======
+  m_Script: {fileID: 11500000, guid: a08264e9ab02c4fd88588429d3213ff1, type: 3}
+  m_Name: HealthUpdater
+  m_EditorClassIdentifier: 
+  Data: {fileID: 11400000, guid: cb7a5841f9e3e460b82926ad49d3d6f4, type: 2}
+>>>>>>> develop

@@ -9,6 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: f9dc89d6d1f2f4dbd932470d64046e0b, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 496f4e51b3e0e4a0ebe30427b069fb5e, type: 3}
+>>>>>>> develop
   m_Name: HealthAction
   m_EditorClassIdentifier: 

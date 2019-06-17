@@ -5,26 +5,45 @@ workspace -fr "images" "images";
 workspace -fr "offlineEdit" "scenes/edits";
 workspace -fr "furShadowMap" "renderData/fur/furShadowMap";
 workspace -fr "iprImages" "renderData/iprImages";
+<<<<<<< HEAD
 workspace -fr "FBX" "data";
+=======
+>>>>>>> develop
 workspace -fr "SVG" "data";
 workspace -fr "renderData" "renderData";
 workspace -fr "scripts" "scripts";
 workspace -fr "fileCache" "cache/nCache";
 workspace -fr "eps" "data";
+<<<<<<< HEAD
 workspace -fr "DAE_FBX" "data";
 workspace -fr "shaders" "renderData/shaders";
 workspace -fr "3dPaintTextures" "sourceimages/3dPaintTextures";
 workspace -fr "translatorData" "data";
 workspace -fr "mel" "scripts";
+=======
+workspace -fr "Fbx" "data";
+workspace -fr "DAE_FBX" "data";
+workspace -fr "shaders" "renderData/shaders";
+workspace -fr "3dPaintTextures" "sourceimages/3dPaintTextures";
+workspace -fr "mel" "scripts";
+workspace -fr "translatorData" "data";
+>>>>>>> develop
 workspace -fr "furFiles" "renderData/fur/furFiles";
 workspace -fr "OBJ" "data";
 workspace -fr "particles" "cache/particles";
 workspace -fr "scene" "scenes";
+<<<<<<< HEAD
 workspace -fr "FBX export" "data";
 workspace -fr "furEqualMap" "renderData/fur/furEqualMap";
 workspace -fr "sourceImages" "sourceimages";
 workspace -fr "furImages" "renderData/fur/furImages";
 workspace -fr "clips" "clips";
+=======
+workspace -fr "sourceImages" "sourceimages";
+workspace -fr "furEqualMap" "renderData/fur/furEqualMap";
+workspace -fr "clips" "clips";
+workspace -fr "furImages" "renderData/fur/furImages";
+>>>>>>> develop
 workspace -fr "BIF" "data";
 workspace -fr "DAE_FBX export" "data";
 workspace -fr "depth" "renderData/depth";
