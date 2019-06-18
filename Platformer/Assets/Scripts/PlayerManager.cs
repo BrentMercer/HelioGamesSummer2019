@@ -36,7 +36,7 @@ public class PlayerManager : MonoBehaviour
         if (enemy.tag == "Enemy")
         {
             var enemyKnockbackPower = enemy.GetComponent<Enemy>().knockbackPower;
-            var enemyDamage = enemy.GetComponent<Enemy>().enemyDamage;
+            var enemyTouchDamage = enemy.GetComponent<Enemy>().enemyTouchDamage;
 
             if (collision.relativeVelocity.x < 0)
             {
@@ -50,7 +50,7 @@ public class PlayerManager : MonoBehaviour
             if (isStunned == false)
             {
                 isStunned = true;
-                TakeDamage(enemyDamage); 
+                TakeDamage(enemyTouchDamage); 
                 Knockback(hitFromRight, enemyKnockbackPower);
                 StartCoroutine(StunPlayerOnDamage());
             }

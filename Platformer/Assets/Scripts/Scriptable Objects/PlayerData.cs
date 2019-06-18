@@ -18,4 +18,6 @@ public class PlayerData : ScriptableObject
 
     public float stunDuration;
 
+    
+
 }
