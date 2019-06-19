@@ -12,9 +12,9 @@ public class CharacterControlObj : ScriptableObject
     private Vector3 position;
     public void OnMove(CharacterController controller)
     {
-        if (Input.GetButtonDown("Jump")) && JumpCount < JumpCountMax)
+        if (Input.GetButtonDown("Jump") && JumpCount < JumpCountMax)
          {
-            Position.y = JumpSpeed;
+            position.y = JumpSpeed;
             JumpCount++;
          }
         if (controller.isGrounded)

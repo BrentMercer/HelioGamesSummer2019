@@ -6,6 +6,10 @@ public class Vector3SO : ScriptableObject
     public Vector3 Value;
     public void UpdateValue(Transform obj)
     {
-        Value = obj.localPosition;
+        Value = obj.TransformPoint(obj.localPosition);
+    }
+    public void UpdateTransform(Transform obj)
+    {
+        obj.localPosition = Value;
     }
 }
