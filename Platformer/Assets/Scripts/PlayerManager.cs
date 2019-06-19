@@ -9,25 +9,71 @@ public class PlayerManager : MonoBehaviour
     public Rigidbody2D playerRB;
     public UI uiUpdater;
     public SpriteRenderer playerSprite;
-    public CharacterController2D charController;
-    public PlayerMover charMover;
+    public CharacterController2D playerController;
+    public PlayerMover playerMover;
+    private AudioSource[] playerAudio;
 
     public static Action onDie;
 
     private bool hitFromRight;
     private bool isStunned = false;
 
+    public AudioClip jumpSound;
+    public AudioClip landSound;
+    [Range(0, 1)] [SerializeField] private float audioVolume;
+
+    //public enum PlayerStates
+    //{
+    //    Idle,
+    //    Walking,
+    //    Jumping,
+    //    Landing,
+    //    Shooting,
+    //    Hurt
+    //}
+    //public PlayerStates playerStates;
 
 
-    private void Start()
+private void Start()
     {
-
+        playerAudio = GetComponents<AudioSource>();
+        //playerStates = PlayerStates.Idle;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
+        //PlayerFSM();
         uiUpdater.UpdateHealth();
+        playJumpSound();
     }
+
+    //private void PlayerFSM()
+    //{
+    //    switch (playerStates)
+    //    {
+    //        case PlayerStates.Idle:
+    //            Debug.Log("Idle state.");
+    //            break;
+    //        case PlayerStates.Walking:
+    //            Debug.Log("Walk state.");
+    //            break;
+    //        case PlayerStates.Jumping:
+    //            Debug.Log("Jump state.");
+    //            break;
+    //        case PlayerStates.Landing:
+    //            Debug.Log("Land state.");
+    //            break;
+    //        case PlayerStates.Shooting:
+    //            Debug.Log("Shoot state.");
+    //            break;
+    //        case PlayerStates.Hurt:
+    //            Debug.Log("Hurt state.");
+    //            break;
+    //        default:
+    //            Debug.Log("Ruh roh, your state machine defaulted... Check all states!");
+    //            break;
+    //    }
+    //}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -54,7 +100,6 @@ public class PlayerManager : MonoBehaviour
                 Knockback(hitFromRight, enemyKnockbackPower);
                 StartCoroutine(StunPlayerOnDamage());
             }
-
         }
     }
 
@@ -92,18 +137,37 @@ public class PlayerManager : MonoBehaviour
         {
             playerRB.AddForce(new Vector3(enemyKnockbackPower, 1000, 0));
         }
-
     }
 
     public IEnumerator StunPlayerOnDamage()
     {
         playerSprite.color = Color.red;
-        charController.enabled = false;
-        charMover.enabled = false;
+        playerController.enabled = false;
+        playerMover.enabled = false;
         yield return new WaitForSeconds(playerData.stunDuration);
         playerSprite.color = Color.white;
-        charController.enabled = true;
-        charMover.enabled = true;
+        playerController.enabled = true;
+        playerMover.enabled = true;
         isStunned = false;
+    }
+
+    public void playJumpSound()
+    {
+        if(playerMover.jump == true && playerController.m_Grounded == true)
+        {
+            playerAudio[0].clip = jumpSound;
+            playerAudio[0].volume = audioVolume;
+            playerAudio[0].Play();
+        }
+    }
+
+    public void playLandSound()
+    {
+        if (playerController.m_Grounded == true)
+        {
+            playerAudio[1].clip = landSound;
+            playerAudio[1].volume = audioVolume;
+            playerAudio[1].Play();
+        }       
     }
 }

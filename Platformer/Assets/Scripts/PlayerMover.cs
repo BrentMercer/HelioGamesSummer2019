@@ -8,8 +8,8 @@ public class PlayerMover : MonoBehaviour
     public PlayerData playerData;
     private float horizontalMove;
 
-    bool jump;
-    bool crouch;
+    public bool jump;
+    public bool crouch;
 
     private void Update()
     {

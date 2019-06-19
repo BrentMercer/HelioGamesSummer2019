@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4992615548484225616}
   - component: {fileID: 4992615548484225618}
   - component: {fileID: 2312113552616741048}
-  - component: {fileID: -6369701064588633468}
+  - component: {fileID: 8412689336133612433}
   m_Layer: 11
-  m_Name: LazerBlast
+  m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1452353543
-  m_SortingLayer: 3
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6ce4db9097f5c472384b99e23182bf5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -119,7 +119,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.0333333, y: 0.48888883}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -129,7 +129,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-6369701064588633468
+--- !u!114 &8412689336133612433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,5 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea308f3ec6eb4930810ee53045e0b2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  bulletSpeed: 20
+  bulletDamage: 20
   rb: {fileID: 4992615548484225618}
+  bulletSound: {fileID: 8300000, guid: 406abe6e803b244eca380af5865dc5cb, type: 3}
+  shotVolume: 0.206

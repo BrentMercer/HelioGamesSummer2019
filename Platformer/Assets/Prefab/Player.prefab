@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8449237493195327803}
   - component: {fileID: 8449237491499256511}
   - component: {fileID: 8449237491499256496}
+  - component: {fileID: -5737833814694308669}
   - component: {fileID: 8449237492926052209}
   - component: {fileID: 8449237492269205548}
   - component: {fileID: 8449237491499256497}
@@ -32,7 +33,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8449237491499256500}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.8, y: 18.1, z: 30}
   m_LocalScale: {x: 0.65, y: 1, z: 1}
   m_Children:
@@ -153,6 +154,102 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.17}
   serializedVersion: 2
   m_Radius: 0.32271007
+--- !u!82 &-5737833814694308669
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8449237491499256500}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &8449237492926052209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,11 +268,12 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   m_GroundCheck: {fileID: 8449237492318764410}
   m_CeilingCheck: {fileID: 8449237492224285766}
   m_CrouchDisableCollider: {fileID: 8449237491499256511}
   playerData: {fileID: 11400000, guid: 52609399dc91744d2bc520a5d44bd39b, type: 2}
+  m_Grounded: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -200,6 +298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 8449237492926052209}
   playerData: {fileID: 11400000, guid: 52609399dc91744d2bc520a5d44bd39b, type: 2}
+  jump: 0
 --- !u!114 &8449237491499256497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +317,9 @@ MonoBehaviour:
   playerSprite: {fileID: 8449237492269205545}
   charController: {fileID: 8449237492926052209}
   charMover: {fileID: 8449237492269205548}
+  playerAudio: {fileID: -5737833814694308669}
+  jumpSound: {fileID: 8300000, guid: 8cb6a3130593140e8a5e5a906cbb49e5, type: 3}
+  audioVolume: 0.301
 --- !u!114 &8449237491499256498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 52609399dc91744d2bc520a5d44bd39b, type: 2}
   firePoint: {fileID: 8449237492708160480}
-  bullet: {fileID: -6369701064588633468, guid: 4d4e21356d87a4ef98e2c5430d357379, type: 3}
+  bullet: {fileID: 8412689336133612433, guid: 4d4e21356d87a4ef98e2c5430d357379, type: 3}
 --- !u!114 &8449237491499256499
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,7 +14,6 @@ public class FlyingEnemy : Enemy
 
 
 
-
     //private void OnCollisionEnter2D(Collision2D collision)
     //{
     //    GameObject player = collision.gameObject;
