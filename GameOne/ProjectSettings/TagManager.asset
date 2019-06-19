@@ -16,10 +16,10 @@ TagManager:
   - 
   - PostProcessing
   - 
-  - 
-  - 
-  - 
-  - 
+  - MainShadow
+  - Ground
+  - Player
+  - Ammo
   - 
   - 
   - 
