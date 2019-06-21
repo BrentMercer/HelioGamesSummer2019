@@ -144,5 +144,5 @@ MonoBehaviour:
   bulletSpeed: 20
   bulletDamage: 20
   rb: {fileID: 4992615548484225618}
-  bulletSound: {fileID: 8300000, guid: 406abe6e803b244eca380af5865dc5cb, type: 3}
+  bulletSound: {fileID: 8300000, guid: f2373511224b648dd96843ccf4e38541, type: 3}
   shotVolume: 0.206

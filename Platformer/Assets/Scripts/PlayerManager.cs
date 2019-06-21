@@ -11,16 +11,17 @@ public class PlayerManager : MonoBehaviour
     public SpriteRenderer playerSprite;
     public CharacterController2D playerController;
     public PlayerMover playerMover;
-    private AudioSource[] playerAudio;
-
-    public static Action onDie;
 
     private bool hitFromRight;
     private bool isStunned = false;
 
+    public static Action onDie;
+
+    private AudioSource[] playerAudio;
     public AudioClip jumpSound;
     public AudioClip landSound;
-    [Range(0, 1)] [SerializeField] private float audioVolume;
+    public AudioClip damageSound;
+    public AudioClip deathSound;
 
     //public enum PlayerStates
     //{
@@ -34,8 +35,12 @@ public class PlayerManager : MonoBehaviour
     //public PlayerStates playerStates;
 
 
-private void Start()
+    private void Start()
     {
+        playerRB = GetComponent<Rigidbody2D>();
+        playerSprite = GetComponent<SpriteRenderer>();
+        playerController = GetComponent<CharacterController2D>();
+        playerMover = GetComponent<PlayerMover>();
         playerAudio = GetComponents<AudioSource>();
         //playerStates = PlayerStates.Idle;
     }
@@ -107,6 +112,7 @@ private void Start()
     {
         playerData.health -= damage;
         checkDeath();
+        PlayPlayerSound(2, damageSound);
     }
 
     public void checkDeath()
@@ -115,6 +121,7 @@ private void Start()
         {
             //Debug.Log("Running onDie action.");
             //onDie?.Invoke();
+            PlayPlayerSound(3, deathSound);
             Die();
         }
     }
@@ -155,19 +162,18 @@ private void Start()
     {
         if(playerMover.jump == true && playerController.m_Grounded == true)
         {
-            playerAudio[0].clip = jumpSound;
-            playerAudio[0].volume = audioVolume;
-            playerAudio[0].Play();
+            PlayPlayerSound(0, jumpSound);
         }
     }
 
     public void playLandSound()
     {
-        if (playerController.m_Grounded == true)
-        {
-            playerAudio[1].clip = landSound;
-            playerAudio[1].volume = audioVolume;
-            playerAudio[1].Play();
-        }       
+        PlayPlayerSound(1, landSound); 
+    }
+
+    public void PlayPlayerSound(int indx, AudioClip soundfx)
+    {
+        playerAudio[indx].clip = soundfx;
+        playerAudio[indx].Play();
     }
 }

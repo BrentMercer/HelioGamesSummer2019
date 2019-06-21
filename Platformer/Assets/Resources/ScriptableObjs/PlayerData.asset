@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   name: Player
-  health: 5000
-  ammo: 9721
+  health: 9760
+  ammo: 9476
   moveSpeed: 50
   jumpForce: 1200
   croutchSpeed: 0.423
