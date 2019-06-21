@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 1335662848264956278}
   - component: {fileID: 1614407166}
   - component: {fileID: 4511581516793294119}
-  - component: {fileID: 1335662848264956276}
+  - component: {fileID: 10240039}
   m_Layer: 12
   m_Name: Bat
   m_TagString: Enemy
@@ -363,10 +363,14 @@ MonoBehaviour:
   enemyPosition: {fileID: 1335662848264956275}
   enemyHealth: 20
   enemyTouchDamage: 10
+  hitFromRight: 0
   knockbackPower: 500
-  flySpeed: 10
+  aiPath: {fileID: 1335662848264956273}
   flySound: {fileID: 8300000, guid: 3a7473ded0e6d484db0a4554f6a8dcbe, type: 3}
---- !u!114 &1335662848264956276
+  flyerShooting: {fileID: 10240039}
+  flySpeed: 10
+  flyerStates: 0
+--- !u!114 &10240039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -375,61 +379,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1335662848264956283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2582cd8d2e22147b7a4efbdfd5194366, type: 3}
+  m_Script: {fileID: 11500000, guid: e1c723c34207040d593ca5abe02327d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TriggerEnterEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  TriggerStayEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  TriggerExitEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  CollisionEnterEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: TakeDamage
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  CollisionStayEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  CollisionExitEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  firePoint: {fileID: 1335662848264956275}
+  enemyBullet: {fileID: 6257361574655003010, guid: 9a740761dd49540c7b454c4f06d4f8b1,
+    type: 3}
+  fireRate: 1
 --- !u!1 &7794680119215940031
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,9 +396,10 @@ GameObject:
   m_Component:
   - component: {fileID: 702055622303131045}
   - component: {fileID: 7309846813308020858}
+  - component: {fileID: 701569855}
   m_Layer: 0
   m_Name: AttackDistance
-  m_TagString: Untagged
+  m_TagString: Activator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -471,12 +428,27 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &701569855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7794680119215940031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ece48ba7d57f945bda4f65e789b89cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyScript: {fileID: 4511581516793294119}
+  flyingEnemyScript: {fileID: 4511581516793294119}
+  aiPath: {fileID: 1335662848264956273}
 --- !u!1 &8656944151743463209
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,9 +459,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4478848092050413846}
   - component: {fileID: 9005453123212155494}
+  - component: {fileID: 8656944151743463210}
   m_Layer: 0
-  m_Name: ActivationDistance
-  m_TagString: Untagged
+  m_Name: ChaseDistance
+  m_TagString: Activator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -518,9 +491,24 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &8656944151743463210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656944151743463209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ece48ba7d57f945bda4f65e789b89cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyScript: {fileID: 4511581516793294119}
+  flyingEnemyScript: {fileID: 4511581516793294119}
+  aiPath: {fileID: 1335662848264956273}

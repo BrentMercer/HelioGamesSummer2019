@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class Weapon : MonoBehaviour
 {
+    public PlayerManager playerManager;
     public PlayerData playerData;
     public Transform firePoint;
     public Bullet bullet;
@@ -14,12 +15,11 @@ public class Weapon : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && playerData.ammo > 0)
         {
-            playerData.ammo--;
-            Shoot();
+            playerManager.playerStates = PlayerManager.PlayerStates.Shooting;
         }
     }
 
-    void Shoot()
+    public void Shoot()
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
     }

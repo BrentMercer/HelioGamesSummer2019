@@ -8,9 +8,10 @@ public class FlyingEnemy : Enemy
 
     public AIPath aiPath;
     public AudioClip flySound;
+    public EnemyShooting flyerShooting;
 
+    private bool firstSqueak;
     public float flySpeed;
-	
 
     public enum FlyerStates
     {
@@ -21,92 +22,42 @@ public class FlyingEnemy : Enemy
     public FlyerStates flyerStates;
 
 
+
     private void Start()
     {
+        enemyAudio = GetComponents<AudioSource>();
         flyerStates = FlyerStates.Idle;
-        aiPath.canMove = false;
+        firstSqueak = false;
     }
+
     private void FixedUpdate()
     {
-        
+        EnemyFlyerFSM();
     }
+
 
     private void EnemyFlyerFSM()
     {
         switch (flyerStates)
         {
             case FlyerStates.Idle:
-                Debug.Log("Idle state.");
                 aiPath.canMove = false;
                 break;
             case FlyerStates.Chasing:
-                Debug.Log("Chase state.");
-                PlayEnemySound(0, flySound);
+                if (firstSqueak == false)
+                {
+                    PlayEnemySound(0, flySound);
+                    firstSqueak = true;
+                }
                 aiPath.canMove = true;
                 break;
             case FlyerStates.Attacking:
-                Debug.Log("Attack state.");
+                aiPath.canMove = false;
+                flyerShooting.Shoot();
                 break;
             default:
                 Debug.Log("Ruh roh, your state machine defaulted... Check all states!");
                 break;
         }
     }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        var checkTag = collision.gameObject.tag;
-        if (checkTag == "Player")
-        {
-            flyerStates = FlyerStates.Chasing;
-        }
-    }
-
-    //public float enemyPause;
-    //public float attackBounceback;
-    //private bool attackOnRight;
-
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    GameObject player = collision.gameObject;
-
-    //    if (player.tag == "Player")
-    //    {
-    //        if (collision.relativeVelocity.x > 0)
-    //        {
-    //            attackOnRight = true;
-    //        }
-    //        else
-    //        {
-    //            attackOnRight = false;
-    //        }
-
-    //        //EnemyKnockback(attackOnRight);
-    //        StartCoroutine(PauseOnAttack());
-    //    }
-    //}
-
-    //public void EnemyKnockback(bool attackOnRight)
-    //{
-    //    if (attackOnRight == true)
-    //    {
-    //        enemyRB.AddForce(new Vector3(1, 1, 0) * attackBounceback);
-    //    }
-    //    else
-    //    {
-    //        enemyRB.AddForce(new Vector3(-1, 1, 0) * attackBounceback);
-    //    }
-    //}
-
-    //public IEnumerator PauseOnAttack()
-    //{
-    //    enemyRB.constraints = RigidbodyConstraints2D.FreezeAll;
-    //    yield return new WaitForSeconds(enemyPause);
-    //    enemyRB.constraints = RigidbodyConstraints2D.None;
-    //}
-
-
-
 }

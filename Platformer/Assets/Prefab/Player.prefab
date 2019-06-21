@@ -267,7 +267,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 54a5ccd5bfc794c27ba247d6299d4e2a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.279
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -626,6 +626,7 @@ MonoBehaviour:
   landSound: {fileID: 8300000, guid: 54a5ccd5bfc794c27ba247d6299d4e2a, type: 3}
   damageSound: {fileID: 8300000, guid: 64e7495ad4ff5499ea8e769fbeb0cb37, type: 3}
   deathSound: {fileID: 8300000, guid: a5f1f7fde276a424291c8dcdf77b9d8f, type: 3}
+  playerStates: 0
 --- !u!114 &8449237491499256498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,18 +661,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   TriggerStayEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   TriggerExitEvent:

@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Activation Distance
+  - Activator
+  - Ground
   layers:
   - Default
   - TransparentFX

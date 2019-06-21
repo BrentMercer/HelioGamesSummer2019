@@ -5,16 +5,21 @@ using Pathfinding;
 
 public class Activator : MonoBehaviour
 {
-    public FlyingEnemy enemyScript;
+    public Enemy enemyScript;
+    public FlyingEnemy flyingEnemyScript;
     public AIPath aiPath;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
         var checkTag = collision.gameObject.tag;
-        if (checkTag == "Player")
+        if (this.name == "ChaseDistance" && checkTag == "Player")
         {
-            enemyScript.flyerStates = FlyingEnemy.FlyerStates.Chasing;
-            aiPath.canMove = true;
+            flyingEnemyScript.flyerStates = FlyingEnemy.FlyerStates.Chasing;
+        }
+        else if (this.name == "AttackDistance" && checkTag == "Player")
+        {
+            flyingEnemyScript.flyerStates = FlyingEnemy.FlyerStates.Attacking;
         }
     }
 

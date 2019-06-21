@@ -21,12 +21,16 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Enemy enemy =  hitInfo.GetComponent<Enemy>();
-        if(enemy != null)
+        if(hitInfo.tag == "Enemy")
         {
-            enemy.TakeDamage(bulletDamage);
+            Enemy enemyInfo = hitInfo.gameObject.GetComponent<Enemy>();
+            enemyInfo.TakeDamage(bulletDamage);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        else if (hitInfo.tag == "Ground")
+        {
+            Destroy(gameObject);
+        }
     }
 
     public AudioSource PlayClipAt(AudioClip clip, Vector3 pos)
