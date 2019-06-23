@@ -16,7 +16,11 @@ namespace Pathfinding {
 	public class AIDestinationSetter : VersionedMonoBehaviour {
 		/// <summary>The object that the AI should move to</summary>
 		public Transform target;
-		IAstarAI ai;
+        private GameObject playerObj;
+        private Transform playerPosition;
+        
+
+        IAstarAI ai;
 
 		void OnEnable () {
 			ai = GetComponent<IAstarAI>();
@@ -25,7 +29,11 @@ namespace Pathfinding {
 			// frame as the destination is used for debugging and may be used for other things by other
 			// scripts as well. So it makes sense that it is up to date every frame.
 			if (ai != null) ai.onSearchPath += Update;
-		}
+            
+            playerObj = GameObject.Find("Player");
+            playerPosition = playerObj.GetComponent<Transform>();
+            target = playerPosition;
+        }
 
 		void OnDisable () {
 			if (ai != null) ai.onSearchPath -= Update;

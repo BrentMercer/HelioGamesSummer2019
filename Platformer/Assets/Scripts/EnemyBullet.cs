@@ -12,6 +12,7 @@ public class EnemyBullet : MonoBehaviour
     public Transform playerPosition;
     public Transform enemyPosition;
 
+    public int shotsPerAttack;
     public float bulletSpeed;
     public int bulletDamage;
     public float bulletKnockbackPower;
@@ -29,7 +30,7 @@ public class EnemyBullet : MonoBehaviour
         playerManager = GameObject.Find("Player").GetComponent<PlayerManager>();
         enemyPosition = this.transform;
 
-        BulletMovement();
+    BulletMovement();
         PlaySound();
     }
 

@@ -5,7 +5,6 @@ using Pathfinding;
 
 public class Activator : MonoBehaviour
 {
-    public Enemy enemyScript;
     public FlyingEnemy flyingEnemyScript;
     public AIPath aiPath;
 

@@ -11,18 +11,30 @@ public class EnemyShooting : MonoBehaviour
     public float fireRate;
 	private bool canShoot = true;
 
+    public int shotsPerAttack;
+    public float bulletSpeed;
+    public int bulletDamage;
+    public float bulletKnockbackPower;
+
     public void Shoot()
     {
 		if (canShoot == true)
 		{
-			Instantiate(enemyBullet, firePoint.position, firePoint.rotation);
+            enemyBullet.bulletDamage = bulletDamage;
+            enemyBullet.bulletKnockbackPower = bulletKnockbackPower;
+
+            for (int i = 1; i < shotsPerAttack + 1; i++)
+            {
+                enemyBullet.bulletSpeed = bulletSpeed * i;
+                Instantiate(enemyBullet, firePoint.position, firePoint.rotation);
+            }
 			canShoot = false;
-			StartCoroutine(shootDelay());
+			StartCoroutine(ShootDelay());
 		}
 
 	}
 
-	IEnumerator shootDelay()
+	IEnumerator ShootDelay()
 	{
 		yield return new WaitForSeconds(fireRate);
 		canShoot = true;

@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 20
-  bulletDamage: 20
+  bulletDamage: 10
   rb: {fileID: 4992615548484225618}
   bulletSound: {fileID: 8300000, guid: f2373511224b648dd96843ccf4e38541, type: 3}
   shotVolume: 0.206

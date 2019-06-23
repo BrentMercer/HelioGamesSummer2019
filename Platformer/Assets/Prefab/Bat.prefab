@@ -386,6 +386,10 @@ MonoBehaviour:
   enemyBullet: {fileID: 6257361574655003010, guid: 9a740761dd49540c7b454c4f06d4f8b1,
     type: 3}
   fireRate: 1
+  shotsPerAttack: 1
+  bulletSpeed: 15
+  bulletDamage: 10
+  bulletKnockbackPower: 500
 --- !u!1 &7794680119215940031
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,7 +450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ece48ba7d57f945bda4f65e789b89cf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyScript: {fileID: 4511581516793294119}
   flyingEnemyScript: {fileID: 4511581516793294119}
   aiPath: {fileID: 1335662848264956273}
 --- !u!1 &8656944151743463209
@@ -509,6 +512,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ece48ba7d57f945bda4f65e789b89cf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyScript: {fileID: 4511581516793294119}
   flyingEnemyScript: {fileID: 4511581516793294119}
   aiPath: {fileID: 1335662848264956273}
