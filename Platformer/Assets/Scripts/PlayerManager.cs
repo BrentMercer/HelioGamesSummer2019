@@ -7,6 +7,9 @@ public class PlayerManager : MonoBehaviour
 {
 
     public PlayerData playerData;
+    public Transform playerTransform;
+    public Vector2Data playerCheckpoint;
+    public Vector3 loadPlayerAt;
     public Rigidbody2D playerRB;
     public UI uiUpdater;
     public SpriteRenderer playerSprite;
@@ -45,6 +48,9 @@ public class PlayerManager : MonoBehaviour
         playerMover = GetComponent<PlayerMover>();
         playerAudio = GetComponents<AudioSource>();
         //playerStates = PlayerStates.Idle;
+
+        loadPlayerAt = new Vector3(playerCheckpoint.Value.x ,playerCheckpoint.Value.y, 30);
+        playerTransform.position = loadPlayerAt;
 
         Enemy.onDamage += damageAction;
         EnemyBullet.onDamage += damageAction;        
@@ -147,6 +153,8 @@ public class PlayerManager : MonoBehaviour
 
         Scene loadedLevel = SceneManager.GetActiveScene();
         SceneManager.LoadScene(loadedLevel.buildIndex);
+
+
     }
 
     public void Knockback(bool hitFromRight, float enemyKnockbackPower)
