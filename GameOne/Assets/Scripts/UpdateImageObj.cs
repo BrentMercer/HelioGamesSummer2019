@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,3 +12,17 @@ public class UpdateImageObj : ScriptableObject
         img.fillAmount = data.Value;
     }
 }
+=======
+﻿using UnityEngine;
+using UnityEngine.UI;
+
+[CreateAssetMenu]
+public class UpdateImageObj : ScriptableObject
+{
+    public FloatDataObj Data;
+    public void ChangeFillAmount(Image img)
+    {
+        img.fillAmount = Data.Value;
+    }
+}
+>>>>>>> develop
