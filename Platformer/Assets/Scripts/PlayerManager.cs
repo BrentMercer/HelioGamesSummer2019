@@ -33,6 +33,7 @@ public class PlayerManager : MonoBehaviour
         Idle,
         Walking,
         Jumping,
+        Falling,
         Landing,
         Shooting,
         Hurt
@@ -56,7 +57,12 @@ public class PlayerManager : MonoBehaviour
         EnemyBullet.onDamage += damageAction;        
     }
 
-    private void FixedUpdate()
+    private void OnLevelWasLoaded(int level)
+    {
+        playerTransform.position = loadPlayerAt;
+    }
+
+    private void Update()
     {
         PlayerFSM();
         uiUpdater.UpdateHealth();
@@ -75,7 +81,7 @@ public class PlayerManager : MonoBehaviour
         {
             case PlayerStates.Idle:
                 Debug.Log("Idle state.");
-                if (playerRB.velocity.x > 0 && playerController.m_Grounded == true)
+                if (playerController.m_Grounded == true && (playerRB.velocity.x > 0 || playerRB.velocity.x < 0))
                 {
                     playerStates = PlayerStates.Walking;
                 }
@@ -84,11 +90,15 @@ public class PlayerManager : MonoBehaviour
                     PlayPlayerSound(0, jumpSound);
                     playerStates = PlayerStates.Jumping;
                 }
+                else if (playerController.m_Grounded == false && playerRB.velocity.y < 0)
+                {
+                    playerStates = PlayerStates.Falling;
+                }
                 break;
 
             case PlayerStates.Walking:
                 Debug.Log("Walk state.");
-                if (playerRB.velocity.x < 0.001f && playerController.m_Grounded == true)
+                if (playerController.m_Grounded == true && (playerRB.velocity.x > -0.01f || playerRB.velocity.x < 0.01f))
                 {
                     playerStates = PlayerStates.Idle;
                 }
@@ -97,10 +107,22 @@ public class PlayerManager : MonoBehaviour
                     PlayPlayerSound(0, jumpSound);
                     playerStates = PlayerStates.Jumping;
                 }
+                else if (playerController.m_Grounded == false && playerRB.velocity.y < 0)
+                {
+                    playerStates = PlayerStates.Falling;
+                }
                 break;
 
             case PlayerStates.Jumping:
                 Debug.Log("Jump state.");
+                if (playerController.m_Grounded == false && playerRB.velocity.y < 0)
+                {
+                    playerStates = PlayerStates.Falling;
+                }
+                break;
+
+            case PlayerStates.Falling:
+                Debug.Log("Fall state.");
                 if (playerController.m_Grounded == true)
                 {
                     playerStates = PlayerStates.Landing;
@@ -153,8 +175,6 @@ public class PlayerManager : MonoBehaviour
 
         Scene loadedLevel = SceneManager.GetActiveScene();
         SceneManager.LoadScene(loadedLevel.buildIndex);
-
-
     }
 
     public void Knockback(bool hitFromRight, float enemyKnockbackPower)
@@ -182,19 +202,6 @@ public class PlayerManager : MonoBehaviour
         isStunned = false;
         playerStates = PlayerStates.Idle;
     }
-
-    //public void playJumpSound()
-    //{
-    //    if(playerMover.jump == true && playerController.m_Grounded == true)
-    //    {
-            
-    //    }
-    //}
-
-    //public void playLandSound()
-    //{
-    //    PlayPlayerSound(1, landSound); 
-    //}
 
     public void PlayPlayerSound(int indx, AudioClip soundfx)
     {

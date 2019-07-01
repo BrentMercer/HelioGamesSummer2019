@@ -6,13 +6,18 @@ public class Checkpoint : MonoBehaviour
 {
 
     public Vector2Data currentCheckpoint;
-    public Vector2 thisCheckpoint;
+    public Transform thisCheckpoint;
     public bool activated;
-
+    public bool isLevelEntrance;
 
     private void Start()
     {
-        thisCheckpoint = new Vector2(this.transform.position.x, this.transform.position.y);
+        if (isLevelEntrance == true)
+        {
+            activateCheckpoint();
+            activated = true;
+
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,8 +31,6 @@ public class Checkpoint : MonoBehaviour
 
     private void activateCheckpoint()
     {
-        currentCheckpoint.Value = thisCheckpoint;
+        currentCheckpoint.Value = thisCheckpoint.position;
     }
-
-   
 }

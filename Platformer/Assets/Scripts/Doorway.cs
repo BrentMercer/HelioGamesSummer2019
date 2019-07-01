@@ -1,25 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
 public class Doorway : MonoBehaviour
 {
-    public string nextSceneName;
-    public int levelLoadDelay;
+    public Transform playerTransform;
+    public Transform doorwayDestination;
 
 
-    public void LoadScene()
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("Loading new scene now.");
-        StartCoroutine(LoadNextScene());
+        if (Input.GetButtonDown("Submit"))
+        {
+            playerTransform = playerTransform.transform;
+            playerTransform.position = doorwayDestination.position;
+        }
     }
 
-    private IEnumerator LoadNextScene()
-    {
-        yield return new WaitForSecondsRealtime(levelLoadDelay);
-        SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
-    }
 
 }
