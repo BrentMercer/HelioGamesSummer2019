@@ -9,7 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: e5b30b45eea2e403cb617093e26bd42b, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
   Value: 1
+=======
+  m_Script: {fileID: 11500000, guid: 4a66b9f2480d60146a80f4cb1429cae6, type: 3}
+  m_Name: Shield
+  m_EditorClassIdentifier: 
+  Value: 1
+  MinValue: 0
+>>>>>>> develop
